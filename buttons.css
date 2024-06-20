@@ -1,0 +1,39 @@
+.buttons {
+  width: 600px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.btn {
+  background-color: rgb(252, 210, 146);
+  border: none;
+  outline: none;
+}
+
+.buttons > button {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 850px) {
+  .buttons {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+  }
+  .buttons > .right {
+    justify-self: end;
+  }
+}
